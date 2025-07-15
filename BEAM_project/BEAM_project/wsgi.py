@@ -17,4 +17,4 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BEAM_project.settings')
 
 application = get_wsgi_application()
-application=WhiteNoise(application,root=os.path.join(ROOT_DIR,'staticfiles'))
+application=WhiteNoise(application,root=os.path.join(ROOT_DIR,'staticfiles')) 

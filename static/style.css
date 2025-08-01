@@ -63,6 +63,13 @@ body {
  background-color: #1a1a1a
 }
 
+.nav-sign{
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 5rem;
+  margin-top:-1rem;
+}
+
 main {
   padding: 40px 20px;
   text-align: center;

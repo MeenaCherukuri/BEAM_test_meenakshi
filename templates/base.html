@@ -15,7 +15,7 @@
     <nav class="navbar fixed-top custom-navbar ">
         <div class="container-fluid">
             <div class="left-section">
-                    <img src="{% static 'logo2.png' %}" alt="BEAM Logo"/>
+                    <img src="{% static 'logo2.png' %}" alt="BEAM Logo" class="nav-img"/>
                     <div class="middle" >
                       <ul class="nav justify-content-center" style="font-size: 1.1rem;gap: 1rem;">
                         <li class="nav-item shade ">
@@ -44,13 +44,42 @@
   <main style="color: white !important;">
     <section id="content">
       <h1>Welcome to BEAM</h1>
-      <p>Click the navigation buttons beside the logo to explore.</p>
     </section>
   </main>
 
   <script src="{% static 'app.js' %}"></script>
   <footer class="footer">
-  <p>&copy; 2025 Your Company. All rights reserved.</p>
+      <div class="footer-logo">
+        <img src="{% static 'logo2.png' %}" alt="BEAM Logo" class="foot-logo"/>
+      </div>
+      <div>
+          <h3>TEAM-BEAM</h3>
+      </div>
+      <div class="footer-team">
+        <div class="footer-team-arrangement">
+          <h5>Ch.Meenakshi Devi</h5>
+          <h6>UI/UX Designer & Frontend Developer</h6>
+        </div>
+        <div class="footer-team-arrangement">
+          <h5>B.Santha Raju</h5>
+          <h6>Tester</h6>
+        </div>
+        <div class="footer-team-arrangement">
+          <h5>G.Adi Vardhini Yadav</h5>
+          <h6>Technical Writer</h6>
+        </div>
+        <div class="footer-team-arrangement">
+          <h5>I.Bhavya Sri</h5>
+          <h6>UI/UX Designer & Frontend Developer</h6>
+        </div>
+        <div class="footer-team-arrangement">
+          <h5>G.Mohan Krishna</h5>
+          <h6>Full-Stack Developer & Technical Researcher</h6>
+        </div>
+      </div>
+      <div class="footer-rights">
+        <p>&copy; 2025 BEAM . All rights reserved.</p>
+      </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>

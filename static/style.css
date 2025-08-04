@@ -50,7 +50,7 @@ body {
 }
 
 .middle:hover{
-  background-color: black;
+  background-color: #000;
 }
 
 .shade{
@@ -68,6 +68,8 @@ body {
   cursor: pointer;
   margin-left: 5rem;
   margin-top:-1rem;
+  background-color: navy;
+  border-radius: 1.5rem;
 }
 
 main {
@@ -103,4 +105,132 @@ main {
 .footer-team-arrangement{
   display: flex;
   flex-direction: column;
+}
+
+#content1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#signup {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.5rem 0.2rem 0.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 15px;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.border-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: visible;
+  z-index: -1;
+}
+
+.train {
+  stroke: white;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 600;     
+  stroke-dashoffset: 600;
+  animation: dashMove 3s linear infinite;
+  filter: drop-shadow(0 0 6px white);
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.how-it-works {
+  padding: 60px 20px;
+}
+
+.how-it-works h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.content2 {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.step {
+  flex: 1 1 250px;
+  background-color: #1a1a1a;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.architecture {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 4.4rem;
+  }
+
+.architecture_img {
+  height: 50%;
+  width: 50%;
+  border-radius: 17%;
+  margin-top: 10px;
+  animation: glowBackground 2s infinite alternate;
+}
+
+@keyframes glowBackground {
+  0% {
+    box-shadow: 0 0 0 black;
+  }
+
+  100% {
+     box-shadow: 0px 0px 17px white;
+  }
+}
+
+.why-choose-us {
+  padding: 60px 20px;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.why-choose-us ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }

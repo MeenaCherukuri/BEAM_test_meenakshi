@@ -18,9 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from BEAM_app.views import home
+from BEAM_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home),
+    path('', views.home, name='home'),
+    path('Firm/', views.firm, name='firm'), 
+    path('About/', views.about, name='about'), 
+    path('Terms_&_Conditions/', views.terms_and_conditions, name='terms_and_conditions'), 
+    path('Log_In/', views.log_in, name='log_in'), 
+    path('Sign_Up/', views.sign_up, name='sign_up'), 
+
 ]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

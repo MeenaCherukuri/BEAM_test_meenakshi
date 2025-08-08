@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ʙᴇᴀᴍ</title>
   {% load static %}
-  <link rel="stylesheet" href="{% static 'style.css' %}?v=2">
+  <link rel="stylesheet" href="{% static 'style.css' %}?v=1">
 
   <link rel="icon" type="image/png" href="{% static 'logo.png' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  
+
   <header>
     <nav class="navbar fixed-top custom-navbar ">
       <div class="container-fluid">
@@ -85,15 +85,67 @@
         <h2 style="font-family: Georgia, serif;">Flow of BEAM</h2>
         <img src="{% static 'Architecture_img.jpg' %}" alt="Architecture_img" class="architecture_img">
       </div>
-      <div class="why-choose-us">
-        <div class="content2">
-          <h2 style="font-family: Georgia, serif;">Why Choose Us</h2>
-          <ul>
+      <div class="why-choose-us" style="color: green !important;">
+        <div class="content3">
+          <div>
+            <h2 style="font-family: Georgia, serif;">Why Choose Us</h2>
+          </div>
+          <div class="arrangement-why-choose-us">
+            <div class="sub-arrangement-why-choose-us">
+              <div>
+                <img src="{% static 'w2c_bfb.png' %}" alt="Built for Businesses">
+              </div>
+              <div>
+                <ul>
+                  <li>Tailored, industry-specific solutions for maximum impact</li>
+                  <li>Scalable infrastructure to grow with your business</li>
+                  <li>Proven strategies to maximize ROI</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sub-arrangement-why-choose-us">
+              <div>
+                <img src="{% static 'w2c_vb.png' %}" alt="Verified Providers">
+              </div>
+              <div>
+                <ul>
+                  <li>Trusted and verified business</li>
+                  <li>Proven track record with high-quality deliverables</li>
+                  <li>Guaranteed reliability and compliance</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sub-arrangement-why-choose-us">
+              <div>
+                <img src="{% static 'w2c_ec.png' %}" alt="Effortless Communication">
+              </div>
+              <div>
+                <ul>
+                  <li>Streamlined onboarding and workflow setup</li>
+                  <li>Clear documentation to minimize back-and-forth</li>
+                  <li>Easy access to updates and progress tracking</li>
+                </ul>
+              </div>
+            </div>
+            <div class="sub-arrangement-why-choose-us">
+              <div>
+                <img src="{% static 'w2c_sc.png' %}" alt="Speed & Clarity">
+              </div>
+              <div>
+                <ul>
+                  <li>Rapid execution without compromising quality</li>
+                  <li>Transparent timelines and deliverables</li>
+                  <li>Clear, concise reporting for better decision-making</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- <ul>
             <li><strong>Built for Businesses:</strong> We focus solely on B2B service needs.</li>
             <li><strong>Verified Providers:</strong> All companies go through strict checks.</li>
             <li><strong>Effortless Communication:</strong> Keep all discussions in one place.</li>
             <li><strong>Speed & Clarity:</strong> Post today, get responses in hours.</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
       <div class="faq">

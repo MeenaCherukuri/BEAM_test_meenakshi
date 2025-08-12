@@ -1,202 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ʙᴇᴀᴍ</title>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'style.css' %}?v=1">
-
-  <link rel="icon" type="image/png" href="{% static 'logo.png' %}">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>React App</title>
+    <script defer="defer" src="/static/js/main.680d01b0.js"></script>
+    <link href="/static/css/main.f855e6bc.css" rel="stylesheet">
 </head>
 
-<body>
-
-  <header>
-    <nav class="navbar fixed-top custom-navbar ">
-      <div class="container-fluid">
-        <div class="left-section">
-          <div>
-            <img src="{% static 'logo2.png' %}" alt="BEAM Logo" class="nav-img" />
-          </div>
-          <div class="middle">
-            <ul class="nav justify-content-center" style="font-size: 1.1rem;gap: 1rem;">
-              <li class="nav-item shade ">
-                <a class="nav-link active" aria-current="page" href="{% url 'firm' %}">Firm</a>
-              </li>
-              <li class="nav-item shade">
-                <a class="nav-link" href="{% url 'about' %}">About</a>
-              </li>
-              <li class="nav-item shade">
-                <a class="nav-link" href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul class="nav justify-content-end nav-sign">
-              <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="{% url 'log_in' %}">Log In</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main style="color: white !important;">
-    <section id="content1">
-      <div>
-        <h1 style="font-family: Georgia, serif;">BEAM</h1>
-        <h2>Connect. Collaborate. Deliver.</h2>
-        <p>Your trusted B2B platform for sourcing expert services in software development, UI/UX design, testing,
-          DevOps,ongoing maintenance and many more</p>
-        <p>New to BEAM? </p>
-        <p>Begin your journey with BEAM now -> <a href="{% url 'sign_up' %}" id="signup">Sign Up
-            <svg class="border-svg" width="100%" height="100%" viewBox="0 0 160 50" preserveAspectRatio="none"
-              aria-hidden="true">
-              <rect class="train" x="1" y="1" width="158" height="48" rx="15" ry="15" fill="none" stroke="white"
-                stroke-width="3" stroke-dasharray="600" stroke-dashoffset="600" />
-            </svg></a>
-        </p>
-      </div>
-      <div class="how-it-works">
-        <div class="cotent2">
-          <h3 style="font-family: Georgia, serif;">How It Works</h2>
-            <div class="steps">
-              <div class="step">
-                <h4>1. Post a Requirement
-          </h3>
-          <p>Let the community know what you need.</p>
-        </div>
-        <div class="step">
-          <h4>2. Get Proposals</h3>
-            <p>Receive offers from trusted service providers tailored to your needs.</p>
-        </div>
-        <div class="step">
-          <h4>3. Start Collaborating</h3>
-            <p>Connect, negotiate, and kick off your project with full transparency.</p>
-        </div>
-      </div>
-      <div class="architecture">
-        <h2 style="font-family: Georgia, serif;">Flow of BEAM</h2>
-        <img src="{% static 'Architecture_img.jpg' %}" alt="Architecture_img" class="architecture_img">
-      </div>
-      <div class="why-choose-us" style="color: green !important;">
-        <div class="content3">
-          <div>
-            <h2 style="font-family: Georgia, serif;">Why Choose Us</h2>
-          </div>
-          <div class="arrangement-why-choose-us">
-            <div class="sub-arrangement-why-choose-us">
-              <div>
-                <img src="{% static 'w2c_bfb.png' %}" alt="Built for Businesses">
-              </div>
-              <div>
-                <ul>
-                  <li>Tailored, industry-specific solutions for maximum impact</li>
-                  <li>Scalable infrastructure to grow with your business</li>
-                  <li>Proven strategies to maximize ROI</li>
-                </ul>
-              </div>
-            </div>
-            <div class="sub-arrangement-why-choose-us">
-              <div>
-                <img src="{% static 'w2c_vb.png' %}" alt="Verified Providers">
-              </div>
-              <div>
-                <ul>
-                  <li>Trusted and verified business</li>
-                  <li>Proven track record with high-quality deliverables</li>
-                  <li>Guaranteed reliability and compliance</li>
-                </ul>
-              </div>
-            </div>
-            <div class="sub-arrangement-why-choose-us">
-              <div>
-                <img src="{% static 'w2c_ec.png' %}" alt="Effortless Communication">
-              </div>
-              <div>
-                <ul>
-                  <li>Streamlined onboarding and workflow setup</li>
-                  <li>Clear documentation to minimize back-and-forth</li>
-                  <li>Easy access to updates and progress tracking</li>
-                </ul>
-              </div>
-            </div>
-            <div class="sub-arrangement-why-choose-us">
-              <div>
-                <img src="{% static 'w2c_sc.png' %}" alt="Speed & Clarity">
-              </div>
-              <div>
-                <ul>
-                  <li>Rapid execution without compromising quality</li>
-                  <li>Transparent timelines and deliverables</li>
-                  <li>Clear, concise reporting for better decision-making</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- <ul>
-            <li><strong>Built for Businesses:</strong> We focus solely on B2B service needs.</li>
-            <li><strong>Verified Providers:</strong> All companies go through strict checks.</li>
-            <li><strong>Effortless Communication:</strong> Keep all discussions in one place.</li>
-            <li><strong>Speed & Clarity:</strong> Post today, get responses in hours.</li>
-          </ul> -->
-        </div>
-      </div>
-      <div class="faq">
-        <h3 style="font-family: Georgia, serif;">Frequently Asked Questions</h3>
-        <p>In development</p>
-        <p>Will be Integrating after taking feedacks</p>
-      </div>
-    </section>
-  </main>
-
-
-  <footer class="footer">
-    <div class="footer-logo">
-      <img src="{% static 'logo2.png' %}" alt="BEAM Logo" class="foot-logo" />
-    </div>
-    <div>
-      <h3>TEAM-BEAM</h3>
-    </div>
-    <div class="footer-team">
-      <div class="footer-team-arrangement">
-        <h5>Ch.Meenakshi Devi</h5>
-        <h6>UI/UX Designer & Frontend Developer</h6>
-      </div>
-      <div class="footer-team-arrangement">
-        <h5>B.Santha Raju</h5>
-        <h6>Tester</h6>
-      </div>
-      <div class="footer-team-arrangement">
-        <h5>G.Adi Vardhini Yadav</h5>
-        <h6>Technical Writer</h6>
-      </div>
-      <div class="footer-team-arrangement">
-        <h5>I.Bhavya Sri</h5>
-        <h6>UI/UX Designer & Frontend Developer</h6>
-      </div>
-      <div class="footer-team-arrangement">
-        <h5>G.Mohan Krishna</h5>
-        <h6>Full-Stack Developer & Technical Researcher</h6>
-      </div>
-    </div>
-    <div class="footer-rights">
-      <p>This a web application not a mobile application</p>
-      <p>&copy; 2025 BEAM . All rights reserved.</p>
-    </div>
-  </footer>
-
-
-  <script src="{% static 'app.js' %}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 </body>
 
 </html>

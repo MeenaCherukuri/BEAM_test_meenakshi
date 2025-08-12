@@ -1,32 +1,8 @@
-"""
-URL configuration for BEAM_project project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
-from django.conf.urls.static import static
+from django.urls import re_path
+from BEAM_app.views import FrontendAppView
 from django.conf import settings
-from BEAM_app import views
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('Firm/', views.firm, name='firm'), 
-    path('About/', views.about, name='about'), 
-    path('Terms_&_Conditions/', views.terms_and_conditions, name='terms_and_conditions'), 
-    path('Log_In/', views.log_in, name='log_in'), 
-    path('Sign_Up/', views.sign_up, name='sign_up'), 
-
-]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    re_path(r'^(?:.*)/?$', FrontendAppView.as_view(), name='home'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

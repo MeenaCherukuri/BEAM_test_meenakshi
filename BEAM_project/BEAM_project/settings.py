@@ -58,7 +58,10 @@ ROOT_URLCONF = 'BEAM_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(ROOT_DIR,'templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR.parent, 'frontend', 'build'),  # React build folder
+            os.path.join(BASE_DIR.parent, 'templates'),   # Optional: keep your old templates
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[os.path.join(ROOT_DIR,'static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR.parent, 'frontend', 'build', 'static'),
+]
 STATIC_ROOT=os.path.join(ROOT_DIR,'staticfiles')
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 

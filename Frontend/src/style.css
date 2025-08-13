@@ -51,7 +51,7 @@ body {
   height: 70px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
   z-index: 1030;
 }
@@ -86,7 +86,8 @@ body {
 }
 
 .middle:hover{
-  background-color: #000;
+  /* background-color: #000; */
+  color: #007BFF;
 }
 
 .shade{
@@ -106,6 +107,24 @@ body {
   margin-top:-1rem;
   background-color: navy;
   border-radius: 1.5rem;
+}
+
+/* Navbar links */
+nav a {
+  text-decoration: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white; /* Matches your screenshot */
+  transition: color 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 1rem;
+  }
 }
  
 main {
@@ -303,3 +322,48 @@ main {
   flex-direction: column;
 }
 
+/* Terms and Conditions */
+/* ===== Terms & Conditions Page Styles ===== */
+.terms-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.terms-container h1 {
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.terms-container section {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.terms-container h2 {
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffcc00;
+}
+
+.terms-container p {
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #ddd;
+}
